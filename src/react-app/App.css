@@ -1,7 +1,6 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
 }
 
@@ -37,9 +36,437 @@
 }
 
 .card {
-  padding: 2em;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+}
+
+.card-header {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.placeholder-image {
+  border-radius: 8px;
+  transition: opacity 0.2s;
+}
+
+.placeholder-image:hover {
+  opacity: 0.9;
+}
+
+footer {
+  background-color: white;
+  border-top: 1px solid var(--airbnb-border);
+  padding: 40px 0;
+  color: var(--airbnb-gray);
+  font-size: 0.875rem;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+footer .container {
+  max-width: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+footer h5 {
+  color: var(--airbnb-black);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+footer p {
+  margin-bottom: 0.5rem;
+  color: var(--airbnb-gray);
+  line-height: 1.6;
+  text-align: center;
+}
+
+footer .col-md-4 {
+  padding: 0 2rem;
+}
+
+footer .col-md-4:first-child {
+  border-right: 1px solid var(--airbnb-border);
+}
+
+footer .mt-4 {
+  margin-top: 2rem !important;
+  padding-top: 2rem;
+  border-top: 1px solid var(--airbnb-border);
+}
+
+.bg-light {
+  background-color: #f8f9fa !important;
+}
+
+.display-4 {
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.lead {
+  color: #6c757d;
+}
+
+h6 {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.list-unstyled li {
+  margin-bottom: 0.5rem;
+  color: #6c757d;
+}
+
+.navbar-brand {
+  font-weight: 600;
+  font-size: 1.5rem;
 }
 
 .read-the-docs {
   color: #888;
+}
+
+.navbar {
+  background-color: white !important;
+  border-bottom: 1px solid var(--airbnb-border);
+  padding: 1rem 0;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.navbar .container-fluid {
+  max-width: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.navbar-brand {
+  color: var(--airbnb-red) !important;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+/* Estilos para la sección de contacto */
+.contact-section {
+  padding: 80px 0;
+  background-color: rgba(13, 110, 253, 0.9);
+  backdrop-filter: blur(5px);
+}
+
+.contact-section .btn-success {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  transition: transform 0.2s;
+}
+
+.contact-section .btn-success:hover {
+  transform: scale(1.05);
+}
+
+.contact-section .lead {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+/* Ajustes generales */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.full-width {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos para el carrusel */
+.carousel {
+  margin-bottom: 2rem;
+}
+
+.carousel-inner {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.carousel-item {
+  height: 300px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 10%;
+  opacity: 0.8;
+}
+
+.carousel-indicators {
+  margin-bottom: 0.5rem;
+}
+
+.carousel-indicators button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 4px;
+}
+
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  padding: 0.5rem;
+}
+
+.hero-section {
+  background-image: url('./assets/images/habitacion3-1.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 100px 0;
+  position: relative;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-section .display-4,
+.hero-section .lead {
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Variables de color Airbnb */
+:root {
+  --airbnb-red: #FF385C;
+  --airbnb-black: #222222;
+  --airbnb-gray: #717171;
+  --airbnb-light-gray: #F7F7F7;
+  --airbnb-border: #DDDDDD;
+}
+
+/* Estilos generales */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: var(--airbnb-black);
+  line-height: 1.5;
+}
+
+/* Navbar */
+.navbar {
+  background-color: white !important;
+  border-bottom: 1px solid var(--airbnb-border);
+  padding: 1rem 0;
+}
+
+.navbar-brand {
+  color: var(--airbnb-red) !important;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+/* Hero Section */
+.hero-section {
+  padding: 80px 0;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero-section::before {
+  background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6));
+}
+
+.hero-section .display-4 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.hero-section .lead {
+  font-size: 1.25rem;
+  color: white;
+  font-weight: 400;
+}
+
+/* Cards */
+.card {
+  border: 1px solid var(--airbnb-border);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.card-header {
+  background-color: white;
+  border-bottom: 1px solid var(--airbnb-border);
+  padding: 1.25rem;
+}
+
+.card-header h5 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--airbnb-black);
+}
+
+.card-body {
+  padding: 1.25rem;
+}
+
+.card h6 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--airbnb-black);
+  margin-bottom: 1rem;
+}
+
+.card ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.card ul li {
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.card ul li:before {
+  content: "•";
+  color: var(--airbnb-red);
+  position: absolute;
+  left: 0;
+  font-size: 1.2rem;
+}
+
+/* Estilo específico para las listas en la sección de habitaciones */
+.card .card-body .row ul li:before {
+  content: none;
+}
+
+.card .card-body .row ul li {
+  padding-left: 0;
+}
+
+/* Carousel */
+.carousel {
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.carousel-item {
+  height: 300px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 32px;
+  height: 32px;
+  background: white;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.18);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 12px;
+  height: 12px;
+}
+
+/* Sección de contacto */
+.contact-section {
+  background-color: white;
+  padding: 64px 0;
+  border-top: 1px solid var(--airbnb-border);
+}
+
+.contact-section h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--airbnb-black);
+  margin-bottom: 1rem;
+}
+
+.contact-section .lead {
+  font-size: 1.125rem;
+  color: var(--airbnb-gray);
+  margin-bottom: 2rem;
+}
+
+.contact-section .btn-success {
+  background-color: var(--airbnb-red);
+  border: none;
+  padding: 14px 24px;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 8px;
+}
+
+.contact-section .btn-success:hover {
+  background-color: #E31C5F;
+}
+
+/* Precios */
+.precio {
+  font-size: 1.375rem;
+  font-weight: 600;
+  color: var(--airbnb-black);
+}
+
+.gastos {
+  font-size: 1rem;
+  color: var(--airbnb-gray);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-section .display-4 {
+    font-size: 2rem;
+  }
+  
+  .hero-section .lead {
+    font-size: 1.125rem;
+  }
+  
+  .card-header h5 {
+    font-size: 1.125rem;
+  }
 }
