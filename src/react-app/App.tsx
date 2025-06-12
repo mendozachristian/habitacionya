@@ -1,14 +1,11 @@
 // src/App.tsx
 
-import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "./App.css";
 
 function App() {
-  const [activeTab, setActiveTab] = useState("habitacion1");
-
   const condicionesGenerales = {
     ubicacion: "A solo 3 cuadras de la plaza principal de Motril",
     zonasComunes: [
