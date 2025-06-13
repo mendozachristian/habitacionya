@@ -487,7 +487,7 @@ function App() {
                   visita
                 </p>
                 <a
-                  href="https://wa.me/34600000000?text=Hola,%20me%20interesa%20información%20sobre%20las%20habitaciones%20en%20Motril"
+                  href="https://wa.me/34666562553?text=Hola,%20me%20interesa%20información%20sobre%20las%20habitaciones%20en%20Motril"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn btn-success btn-lg"
