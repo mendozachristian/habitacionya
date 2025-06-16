@@ -17,7 +17,7 @@ function App() {
     ],
     condiciones: [
       "Estancia mínima: 6 meses",
-      "Fianza: 2 meses",
+      "Fianza: 1 mes",
       "No se permiten mascotas ni visitas",
       "No se permite fumar",
       "No parejas",
@@ -137,7 +137,10 @@ function App() {
       ],
       precio: 300,
       gastos: 40,
-      caracteristicas: ["Cama de 1,35 m con colchón confortable"],
+      caracteristicas: [
+        "Cama de 1,35 m con colchón confortable",
+        "Exterior vista a la calle",
+      ],
     },
     {
       id: "habitacion2",
@@ -150,9 +153,12 @@ function App() {
         "https://raw.githubusercontent.com/mendozachristian/motril-images/main/habitacion2/IMG_5.jpeg",
         "https://raw.githubusercontent.com/mendozachristian/motril-images/main/habitacion2/IMG_6.jpeg",
       ],
-      precio: 350,
+      precio: 250,
       gastos: 40,
-      caracteristicas: ["Cama de 1,30 m con colchón confortable"],
+      caracteristicas: [
+        "Cama de 90 cm con colchón confortable",
+        "Exterior vista a la calle",
+      ],
     },
     {
       id: "habitacion3",
@@ -169,9 +175,12 @@ function App() {
         "https://raw.githubusercontent.com/mendozachristian/motril-images/main/habitacion3/IMG_9.jpeg",
         "https://raw.githubusercontent.com/mendozachristian/motril-images/main/habitacion3/IMG_10.jpeg",
       ],
-      precio: 250,
+      precio: 300,
       gastos: 40,
-      caracteristicas: ["Cama individual con colchón confortable"],
+      caracteristicas: [
+        "Cama individual con colchón confortable",
+        "Exterior vista a la calle",
+      ],
     },
     {
       id: "habitacion4",
@@ -188,9 +197,9 @@ function App() {
         "https://raw.githubusercontent.com/mendozachristian/motril-images/main/habitacion4/IMG_9.jpeg",
         "https://raw.githubusercontent.com/mendozachristian/motril-images/main/habitacion4/IMG_10.jpeg",
       ],
-      precio: 400,
+      precio: 280,
       gastos: 40,
-      caracteristicas: ["Cama de 1,35 m con colchón confortable"],
+      caracteristicas: ["Cama de 1,35 m con colchón confortable", "Interior"],
     },
   ];
 
@@ -221,11 +230,20 @@ function App() {
               Se alquilan habitaciones privadas en un piso compartido, ideal
               para personas tranquilas, responsables y con estadías largas.
             </p>
+            <a
+              href="https://wa.me/34666542917?text=Hola,%20me%20interesa%20información%20sobre%20las%20habitaciones%20en%20Motril"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-success btn-lg mt-5"
+            >
+              <i className="bi bi-whatsapp me-2"></i>
+              Contactar por WhatsApp
+            </a>
           </div>
         </div>
 
         {/* Condiciones Generales */}
-        <div className="container py-5">
+        <div className="container py-4">
           <div className="row">
             <div className="col-12">
               <div className="card">
@@ -266,7 +284,7 @@ function App() {
         </div>
 
         {/* Características Comunes */}
-        <div className="container py-5">
+        <div className="container py-2">
           <div className="row">
             <div className="col-12">
               <div className="card">
@@ -300,83 +318,8 @@ function App() {
           </div>
         </div>
 
-        {/* Zonas Comunes */}
-        <div className="container py-5">
-          <div className="row">
-            <div className="col-12">
-              <div className="card">
-                <div className="card-header">
-                  <h5 className="mb-0">Zonas Comunes</h5>
-                </div>
-                <div className="card-body">
-                  <div
-                    id="carousel-zonas-comunes"
-                    className="carousel slide mb-4"
-                    data-bs-ride="carousel"
-                  >
-                    <div className="carousel-indicators">
-                      {zonasComunesImages.map((_, index) => (
-                        <button
-                          key={index}
-                          type="button"
-                          data-bs-target="#carousel-zonas-comunes"
-                          data-bs-slide-to={index}
-                          className={index === 0 ? "active" : ""}
-                          aria-current={index === 0 ? "true" : "false"}
-                          aria-label={`Slide ${index + 1}`}
-                        ></button>
-                      ))}
-                    </div>
-                    <div className="carousel-inner rounded">
-                      {zonasComunesImages.map((image, index) => (
-                        <div
-                          key={index}
-                          className={`carousel-item ${
-                            index === 0 ? "active" : ""
-                          }`}
-                        >
-                          <img
-                            src={image.url}
-                            className="d-block w-100"
-                            alt={image.alt}
-                            style={{ height: "600px", objectFit: "cover" }}
-                          />
-                        </div>
-                      ))}
-                    </div>
-                    <button
-                      className="carousel-control-prev"
-                      type="button"
-                      data-bs-target="#carousel-zonas-comunes"
-                      data-bs-slide="prev"
-                    >
-                      <span
-                        className="carousel-control-prev-icon"
-                        aria-hidden="true"
-                      ></span>
-                      <span className="visually-hidden">Previous</span>
-                    </button>
-                    <button
-                      className="carousel-control-next"
-                      type="button"
-                      data-bs-target="#carousel-zonas-comunes"
-                      data-bs-slide="next"
-                    >
-                      <span
-                        className="carousel-control-next-icon"
-                        aria-hidden="true"
-                      ></span>
-                      <span className="visually-hidden">Next</span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Main Content */}
-        <div className="container py-5">
+        <div className="container py-2">
           <h2 className="mb-4">Nuestras Habitaciones</h2>
           <div className="row">
             {habitaciones.map((habitacion) => (
@@ -427,6 +370,15 @@ function App() {
                         type="button"
                         data-bs-target={`#carousel-${habitacion.id}`}
                         data-bs-slide="prev"
+                        style={{
+                          backgroundColor: "rgba(0,0,0,0.3)",
+                          width: "50px",
+                          height: "50px",
+                          top: "50%",
+                          transform: "translateY(-50%)",
+                          left: "10px",
+                          borderRadius: "50%",
+                        }}
                       >
                         <span
                           className="carousel-control-prev-icon"
@@ -439,6 +391,15 @@ function App() {
                         type="button"
                         data-bs-target={`#carousel-${habitacion.id}`}
                         data-bs-slide="next"
+                        style={{
+                          backgroundColor: "rgba(0,0,0,0.3)",
+                          width: "50px",
+                          height: "50px",
+                          top: "50%",
+                          transform: "translateY(-50%)",
+                          right: "10px",
+                          borderRadius: "50%",
+                        }}
                       >
                         <span
                           className="carousel-control-next-icon"
@@ -474,6 +435,127 @@ function App() {
           </div>
         </div>
 
+        {/* Sección de Documentación Necesaria */}
+        <div id="documentacion" className="container py-2">
+          <div className="row">
+            <div className="col-12">
+              <div className="card">
+                <div className="card-header">
+                  <h5 className="mb-0">Documentación Necesaria</h5>
+                </div>
+                <div className="card-body">
+                  <div className="row">
+                    <div className="col-md-4">
+                      <h6>Documento de Identidad</h6>
+                      <ul>
+                        <li>DNI, NIE o pasaporte vigente</li>
+                      </ul>
+                    </div>
+                    <div className="col-md-4">
+                      <h6>Si estás trabajando</h6>
+                      <ul>
+                        <li>Contrato laboral</li>
+                        <li>Últimas 3 nóminas</li>
+                      </ul>
+                    </div>
+                    <div className="col-md-4">
+                      <h6>Si eres estudiante</h6>
+                      <ul>
+                        <li>Comprobante de matrícula</li>
+                        <li>Aval económico</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Zonas Comunes */}
+        <div className="container py-2">
+          <div className="row">
+            <div className="col-12">
+              <h2 className="mb-4">Zonas Comunes</h2>
+              <div
+                id="carousel-zonas-comunes"
+                className="carousel slide mb-4"
+                data-bs-ride="carousel"
+              >
+                <div className="carousel-indicators">
+                  {zonasComunesImages.map((_, index) => (
+                    <button
+                      key={index}
+                      type="button"
+                      data-bs-target="#carousel-zonas-comunes"
+                      data-bs-slide-to={index}
+                      className={index === 0 ? "active" : ""}
+                      aria-current={index === 0 ? "true" : "false"}
+                      aria-label={`Slide ${index + 1}`}
+                    ></button>
+                  ))}
+                </div>
+                <div className="carousel-inner rounded">
+                  {zonasComunesImages.map((image, index) => (
+                    <div
+                      key={index}
+                      className={`carousel-item ${index === 0 ? "active" : ""}`}
+                    >
+                      <img
+                        src={image.url}
+                        className="d-block w-100"
+                        alt={image.alt}
+                        style={{ height: "600px", objectFit: "cover" }}
+                      />
+                    </div>
+                  ))}
+                </div>
+                <button
+                  className="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#carousel-zonas-comunes"
+                  data-bs-slide="prev"
+                  style={{
+                    backgroundColor: "rgba(0,0,0,0.3)",
+                    width: "50px",
+                    height: "50px",
+                    top: "50%",
+                    transform: "translateY(-50%)",
+                    left: "10px",
+                    borderRadius: "50%",
+                  }}
+                >
+                  <span
+                    className="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span className="visually-hidden">Previous</span>
+                </button>
+                <button
+                  className="carousel-control-next"
+                  type="button"
+                  data-bs-target="#carousel-zonas-comunes"
+                  data-bs-slide="next"
+                  style={{
+                    backgroundColor: "rgba(0,0,0,0.3)",
+                    width: "50px",
+                    height: "50px",
+                    top: "50%",
+                    transform: "translateY(-50%)",
+                    right: "10px",
+                    borderRadius: "50%",
+                  }}
+                >
+                  <span
+                    className="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span className="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
         {/* Sección de Contacto */}
         <div className="contact-section">
           <div className="container">
@@ -487,7 +569,7 @@ function App() {
                   visita
                 </p>
                 <a
-                  href="https://wa.me/34666562553?text=Hola,%20me%20interesa%20información%20sobre%20las%20habitaciones%20en%20Motril"
+                  href="https://wa.me/34666542917?text=Hola,%20me%20interesa%20información%20sobre%20las%20habitaciones%20en%20Motril"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn btn-success btn-lg"
