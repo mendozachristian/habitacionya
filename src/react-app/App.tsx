@@ -178,7 +178,7 @@ function App() {
       precio: 300,
       gastos: 40,
       caracteristicas: [
-        "Cama individual con colchón confortable",
+        "Cama de 1,35 m con colchón confortable",
         "Exterior vista a la calle",
       ],
     },
